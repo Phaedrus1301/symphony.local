@@ -3,18 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <title>symphony.local</title>
 </head>
 <body>
-    <div class="navbar">
-        <h2>symphony.local</h2>
-        <div class="search-bar">
+    <div class="container">
+        <div class="container-navbar">
+            <div class="logo">
+                <!-- https://iconoir.com/ "lullaby.svg" -->
+                <?xml version="1.0" encoding="UTF-8"?>
+                <svg width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000" data-darkreader-inline-color="" style="--darkreader-inline-color: #fdfbf8;">
+                    <path d="M3 11.5066C3 16.7497 7.25034 21 12.4934 21C16.2209 21 19.4466 18.8518 21 15.7259C12.4934 15.7259 8.27411 11.5066 8.27411 3C5.14821 4.55344 3 7.77915 3 11.5066Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke: #000000;">
+                    </path>
+                    <path d="M19 9.5C19 10.3284 18.3284 11 17.5 11C16.6716 11 16 10.3284 16 9.5C16 8.67157 16.6716 8 17.5 8C18.3284 8 19 8.67157 19 9.5ZM19 9.5V3.6C19 3.26863 19.2686 3 19.6 3H21" stroke="#000000" stroke-width="1.5" stroke-linecap="round" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke: #000000;">
+                    </path>
+                </svg>
+                <a href="#" class="logo-text">symphony.local</a>
+            </div>
+            <div class="search-bar">
+                <!--search bar code if needed in future. 
+                something like this: https://codepen.io/ShortCode/pen/jOrBeOw -->
+            </div>
+        </div>
+        
+        <div class="container-main">
+            <div class="container-sidebar">
+                <aside class="sidebar">
+                    <div class="load-file">
+                        <input type="file" id="actual-btn" hidden/>
+                        <label for="actual-btn">Choose File</label>
+                    </div>
+                    <div class="loaded-content">
+                        <!-- here's where the content read from our user's file will be shown i.e all the MP3 and FLAC files only. -->
+                    </div>
+                </aside>
+            </div>
             
+            <div class="container-music">
+                <!-- main music image and some text over it like music name, artist name -->
+            </div>
+    
+            <div class="container-queue">
+                <!-- ongoing queue of songs go here -->
+            </div>
+        </div>
+
+        <div class="container-bottom">
+            <div class="extras">
+                <!-- copyright & gh link & etc etc -->
+            </div>
+            <div class="music-controls">
+                <!-- all the music controls go here - shuffle, skip prev, play/pause, skip next, repeat, volume -->
+            </div>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
