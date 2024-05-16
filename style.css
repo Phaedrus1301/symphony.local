@@ -33,6 +33,16 @@ overflow-wrap: break-word;
 isolation: isolate;
 }
 
+.container-navbar, .container-sidebar, .container-music, .container-queue, .container-footer {
+  box-sizing: border-box;
+  border: 2px solid;
+}
+.container-main {
+  display: flex;
+  justify-content: space-between;
+
+
+}
 .container .container-navbar .logo {
 font-family: 'Space Grotesk', sans-serif;
 display: flex;
@@ -49,4 +59,8 @@ padding: 0.5rem;
 border-radius: 0.3rem;
 cursor: pointer;
 margin-top: 1rem;
+}
+
+.container-controls .inner-controls {
+  display: flex;
 }
