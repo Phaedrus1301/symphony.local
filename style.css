@@ -32,7 +32,9 @@ overflow-wrap: break-word;
 #root, #__next {
 isolation: isolate;
 }
+/* ********************************* */
 
+/* global css */
 .container-navbar, .container-sidebar, .container-music, .container-queue, .container-footer {
   box-sizing: border-box;
   border: 2px solid;
@@ -40,9 +42,9 @@ isolation: isolate;
 .container-main {
   display: flex;
   justify-content: space-between;
-
-
 }
+
+/* top panel css */
 .container .container-navbar .logo {
 font-family: 'Space Grotesk', sans-serif;
 display: flex;
@@ -52,15 +54,69 @@ gap: 6px;
 padding: 15px;
 }
 
+/* left panel css */
+.container-sidebar .sidebar .load-file {
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .container-sidebar .sidebar .load-file > label {
-background-color: indigo;
+background-color: gray;
 color: white;
 padding: 0.5rem;
 border-radius: 0.3rem;
 cursor: pointer;
-margin-top: 1rem;
 }
 
+/* music controls css */
 .container-controls .inner-controls {
   display: flex;
+}
+
+.play-pause .pause {
+  display: none;
+}
+
+.volume {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.volume #mute, #volume25, #volume100 {
+  display: none;
+}
+
+.volume .volume-range {
+  display: none;
+}
+
+.volume .bar-hoverbox {
+  padding: 10px 15px;
+  opacity: 0.7;
+  transition: opacity .2s;
+}
+
+.volume .bar-hoverbox:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.volume .bar-hoverbox .bar {
+  background: #999;
+  height: 7px;
+  width: 120px;
+  border-radius: 15px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.volume .bar-hoverbox .bar .bar-fill {
+  background: #000;
+  width: 0%;
+  height: 100%;
+  background-clip: border-box;
+  pointer-events: nones;
 }
